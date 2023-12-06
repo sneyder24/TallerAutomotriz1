@@ -1,0 +1,61 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{% static 'img/logos/Icono2.png' %}" type="image/x-icon">
+    {% bootstrap_css %} {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/partial/body.css' %}">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'node_modules/sweetalert2/dist/sweetalert2.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'node_modules/sweetalert2/dist/sweetalert2.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap-icons/font/bootstrap-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tablas/cdn.datatables.net_1.13.6_css_dataTables.bootstrap5.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tablas/cdn.datatables.net_buttons_2.4.2_css_buttons.dataTables.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tablas/cdn.datatables.net_responsive_2.5.0_css_responsive.bootstrap5.min.css' %}" />
+    <script src="{% static 'node_modules/jquery/dist/jquery.js'%}"></script>
+    <script src="{% static 'node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js'%}"></script>
+    <script src="{% static 'js/tablas/cdn.datatables.net_responsive_2.5.0_js_dataTables.responsive.min.js'%}"></script>
+    <script src="{% static 'js/tablas/cdn.datatables.net_responsive_2.5.0_js_responsive.bootstrap5.min.js'%}"></script>
+    <title>Taller Automotriz Pinautos</title>
+
+  </head>
+
+<body{% if request.session.theme == 'dark' %}class="theme-dark"{% else %}class="theme-light"{% endif %} class="color" id="texto">
+  {% include 'partials/header.html' %}
+    <div class=" container "> 
+      {% block contenido %}
+      {% endblock contenido %}
+    </div>
+  {% include 'partials/modal.html'%}
+  {% include 'partials/scripts.html'%}
+  <script src="{% static 'js/body.js'%}"></script>
+  <script src="{% static 'js/accessibility.js'%}"></script>
+  <script type="text/javascript" src="{% static '/node_modules/accessibility/dist/main.bundle.js' %}"></script>
+  {% include 'partials/footer.html' %}
+  {% if messages %}
+  {% for message in messages %}
+  <script> 
+    Swal.fire(
+      {position: 'top-end',
+    toast: true,
+    showConfirmButton: false,
+    timer:10000,
+    timerProgressBar: true,
+    background: '#fffff',
+    icon:'{{ message.tags }}',
+    text:'{{ message }}',
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }        });
+  </script>
+  
+  {% endfor %}
+  {% endif %}
+</body>
+</html>

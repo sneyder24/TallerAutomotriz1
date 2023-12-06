@@ -1,0 +1,54 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+{% block contenido %}
+<body>
+    <a href="{% url 'marcarepuestos-crear' %}" class="btn btn-success w-25">Crear Marca Repuesto</a>
+    <div class="card fondcard m-5">
+      <h3 class="text-center m-2">Marca De repuestos</h3>
+      <div class="card-body">
+          <table id="example2" class="table table-striped" style="width:100%">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre Marca Repuestos</th>
+                <th>Gama Repuesto</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for marcarepuesto in marcarepuestos %}
+                {% if marcarepuesto.estado != "0" %}
+                  <tr>
+                    <td>{{marcarepuesto.id}}</td>
+                    <td>{{marcarepuesto.nombremarcarepuesto}}</td>
+                    <td>{{marcarepuesto.gama_repuesto}}</td>
+                    <td>
+                      <button type="button" onclick="changeURL('{{marcarepuesto.id}}')" data-taller-pinautos="{{marcarepuesto.id}}" class="btnEliminar btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalConf">
+                        <i class="bi bi-trash"></i>
+                      </button>
+                      <a class="btn btn-primary" href="{% url 'marcarepuestos-modificar' marcarepuesto.id%}">
+                        <i class="bi bi-pencil-square"></i>
+                      </a>
+                    </td>
+                  </tr>
+                {% endif %}
+              {% endfor %}
+            </tbody>
+          </table>
+          </div>
+      </div>
+    </div>
+  </section>
+  <script src="{% static 'node_modules/datatables.net/js/jquery.dataTables.min.js'%}"></script>
+  <script src="{% static 'js/tablas/cdn.datatables.net_responsive_2.5.0_js_dataTables.responsive.min.js'%}"></script>
+  <script src="{% static 'js/tablas/responsive.js'%}"></script>
+  <script src="{% static 'js/tablas/botones.js'%}"></script>
+  <script src="{% static 'js/tablas/botones-bootrap.js'%}"></script>
+  <script src="{% static 'js/tablas/zip.js'%}"></script>
+  <script src="{% static 'js/tablas/pdfmake.js'%}"></script>
+  <script src="{% static 'js/tablas/fonts.js'%}"></script>
+  <script src="{% static 'js/tablas/html5.js'%}"></script>
+  <script src="{% static 'js/tablas/print.js'%}"></script>
+  <script src="{% static 'js/tablas/colVis.js'%}"></script>
+  <script src="{% static 'js/tablas/tablas2.js'%}"></script>
+{% endblock contenido %}

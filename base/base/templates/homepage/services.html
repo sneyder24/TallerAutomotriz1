@@ -1,0 +1,171 @@
+{% extends 'homepage/body-homepage.html' %}
+{% load static %}
+{% block contenido %}
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/homepage/services.css' %}">
+        <link rel="stylesheet" href="{% static 'css/homepage/us.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/bootstrap/scss/all.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'node_modules/swiper/swiper-bundle.min.css' %}"/>
+        <script src="{% static 'node_modules/swiper/swiper-bundle.min.js' %}"></script>
+        <script src="{% static 'node_modules/scrollreveal/dist/scrollreveal.js' %}"></script>
+    </head>
+    <body>
+        <!-- Inicio Titulo -->
+        <hr>
+        <section class="container-fluid">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <h1 class=" text-box ">Servicios</h1>
+            </div>
+        </section>
+        <!--Fin Titulo -->
+
+        <hr>
+        
+        <!-- Inicio Servicios -->
+        <section class="container-fluid ">
+            <div class="container ">
+                <div class="text-center mt-3 mb-3">
+                    <h6 class="color-text text-uppercase" style="letter-spacing: 5px; font-size: 18px;">Taller Automotriz Pinautos</h6>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="text-center fondsevices mb-4 py-4 px-4 border">
+                            <h5 class="mb-3 text-card">Mecánica General</h5>
+                            <p class="m-0 text-card">En Pinautos, ofrecemos soluciones confiables y eficientes para mantener tu vehículo en excelente estado. Desde el mantenimiento preventivo hasta reparaciones especializadas, nuestro equipo de expertos se encargará de todos los aspectos mecánicos de tu automóvil. Precios competitivos, atención de calidad y resultados garantizados.</p>
+                            <img src="{% static 'img/servicios/MantenimientoGeneral.jpg' %}" alt="" class="img-fluid mb-3 img-service mt-3">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="text-center fondsevices mb-4 py-4 px-4 border">
+                            <h5 class="mb-3 text-card">Mantenimiento Preventivo</h5>
+                            <p class="m-0 text-card">Mantén tu vehículo en excelente estado con nuestro servicio de mantenimiento preventivo! En Pinautos, nos encargamos de inspeccionar y cuidar cada detalle importante de tu automóvil. Nuestro equipo experto y precios competitivos garantizan tu tranquilidad en la carretera.</p>
+                            <img src="{% static 'img/servicios/MantenimientoPreventivo.jpeg' %}" alt="" class="img-fluid mb-3 img-service mt-3">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="text-center fondsevicescard mb-4 py-4 px-4 border">
+                            <h5 class="mb-3 text-card">Revisión de Frenos</h5>
+                            <p class="m-0 text-card">Asegura tu seguridad en la carretera con nuestro servicio de revisión de frenos! En Pianutos, ofrecemos una inspección exhaustiva y precisa de todo el sistema de frenado de tu vehículo. Nuestro equipo especializado y precios competitivos garantizan tu tranquilidad al conducir.</p>
+                            <img src="{% static 'img/servicios/RevisionFrenos.jpg' %}" alt="Imagen 3" class="img-fluid mb-3 img-service mt-3">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="text-center fondsevicescard mb-4 py-4 px-4 border">
+                            <h5 class="mb-3 text-card">Limpieza interna y externa del motor</h5>
+                            <p class="m-0 text-card">Dale un impulso a tu motor con nuestro servicio de limpieza especializada! En Pinautos, utilizamos técnicas y productos avanzados para eliminar la suciedad y los residuos, dejando tu motor limpio y eficiente. Mejora el rendimiento y prolonga la vida útil de tu vehículo.</p>
+                            <img src="{% static 'img/servicios/LimpiezaMotor.webp' %}" alt="Imagen 4" class="img-fluid mb-3 img-service mt-3">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="text-center fondsevicescard mb-4 py-4 px-4 border">
+                            <h5 class="mb-3 text-card">Revisión de fluidos</h5>
+                            <p class="m-0 text-card">Mantén tu vehículo en excelentes condiciones con nuestro servicio de revisión de fluidos! En Pinautos, nos encargamos de verificar y mantener los niveles adecuados de los fluidos esenciales de tu automóvil. Mejora el rendimiento y evita problemas costosos.</p>
+                            <img src="{% static 'img/servicios/RevisionFluidos.jpg' %}" alt="Imagen 4" class="img-fluid mb-3 img-service mt-3">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="text-center fondsevicescard mb-4 py-4 px-4 border">
+                            <h5 class="mb-3 text-card">Revisión de Filtros</h5>
+                            <p class="m-0 text-card">Asegura un rendimiento óptimo de tu vehículo con nuestro servicio de revisión de filtros! En Pinautos, nos encargamos de verificar y mantener los filtros clave de tu automóvil para proteger el motor y mejorar la eficiencia.</p>
+                            <img src="{% static 'img/servicios/RevisionFiltros.jpg' %}" alt="Imagen 4" class="img-fluid mb-3 img-service mt-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Servicios -->
+
+        <hr>
+
+        <!-- Inicio Otros Servicios -->
+        <h1 class="text-center m-4">Otros Servicios</h1>
+        <section class="swiper-container m-4">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="{% static 'img/servicios/Direccion.jpg' %}" alt="">
+                    <div class="card-description">
+                        <div class="card-title text-center">
+                            <h4>Dirección</h4>
+                        </div>
+                        <div class="card-text text-center">
+                            <p> Solucionamos problemas de dirección para una conducción segura</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/servicios/suspencion.jpg' %}" alt="">
+                    <div class="card-description">
+                        <div class="card-title text-center">
+                            <h4>Suspensión</h4>
+                        </div>
+                        <div class="card-text text-center">
+                            <p>Garantizamos una conducción suave y cómoda con reparaciones de suspensión</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/servicios/Embrague.jpg' %}" alt="">
+                    <div class="card-description">
+                        <div class="card-title text-center">
+                            <h4>Embrague</h4>
+                        </div>
+                        <div class="card-text text-center">
+                            <p>Mantenemos y reparamos tu embrague para un cambio de marchas suave</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/servicios/Climatizacion.jpg' %}" alt="">
+                    <div class="card-description">
+                        <div class="card-title text-center">
+                            <h4>Climatización</h4>
+                        </div>
+                        <div class="card-text text-center">
+                            <p>Mantenemos tu sistema de climatización en óptimas condiciones para tu comodidad</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/servicios/Transmision.jpg' %}" alt="">
+                    <div class="card-description">
+                        <div class="card-title text-center">
+                            <h4>Transmisión</h4>
+                        </div>
+                        <div class="card-text text-center">
+                            <p>Nuestros técnicos expertos mantienen y reparan tu transmisión para un rendimiento sin problemas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/servicios/Lubricante.jpg' %}" alt="">
+                    <div class="card-description">
+                        <div class="card-title text-center">
+                            <h4>Filtros de Lubricantes</h4>
+                        </div>
+                        <div class="card-text text-center">
+                            <p> Cambios y mantenimiento de filtros para un motor eficiente y duradero</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="{% static 'img/servicios/Alineacion-y-Balanceo.jpg' %}" alt="">
+                    <div class="card-description">
+                        <div class="card-title text-center">
+                            <h4>Alineación y Balanceo de Ruedas</h4>
+                        </div>
+                        <div class="card-text text-center">
+                            <p> Cambios y mantenimiento de filtros para un motor eficiente y duradero</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin Otros Servicios -->
+
+        <script src="{% static 'node_modules/swiper/swiper-bundle.min.js' %}"></script>
+        <script src="{% static 'js/homepage/app.js' %}"></script>
+        <script src="{% static 'js/homepage/us.js' %}"></script>
+    </body>
+</html>
+{% endblock contenido %}

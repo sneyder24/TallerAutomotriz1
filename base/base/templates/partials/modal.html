@@ -1,0 +1,24 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/partial/model.css' %}">
+</head>
+<body>
+  <div class="modal fade" id="modalConf" tabindex="-1" aria-labelledby="modalConfLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header ">
+            <h4 id="modalConfLabel" class="modal-title " >Eliminar {{titulo}} </h4>
+            <button class="btn-close " type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <p>¿Esta usted seguro de eliminar {{titulo|lower}}? </p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button type="button"class="btn btn-success" data-bs-dismiss="modal"><i class="bi bi-box-arrow-in-left"> Cancelar</i></button>
+            <a  id="btnConfElim" href="" class=" btn btn-danger"><i class="bi bi-trash-fill"> Estoy Seguro</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

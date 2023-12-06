@@ -1,0 +1,57 @@
+/* Estilos para el tema oscuro */
+body.theme-dark {
+  background-color:#232323;
+  color: #ffffff;
+ 
+}
+
+body.theme-dark { 
+  .fondofooter,
+  .fondoheader,
+  .textcolor,
+  .textfooter, 
+  .whatsapp-footer,
+  .telefono-footer,
+  .correo-footer,
+  .fondboton{
+    background-color: #181818;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .footertitle{
+    color:#0d6efd ;
+  }
+
+}
+ 
+body.theme-light {
+  background-color:#f7f7f7;
+  color: #333333;
+}
+
+body.theme-light { 
+  .fondofooter,
+  .fondoheader,
+  .textcolor,
+  .textfooter, 
+  .whatsapp-footer,
+  .telefono-footer,
+  .correo-footer,
+  .fondboton{
+    background-color: #e0d8b3;
+    color: #333333;
+    text-decoration: none;
+  }
+  .footertitle{
+    color:#34495e ;
+  }
+}
+ 
+
+.paralyzed{
+    position: fixed; 
+    top: 0;  
+    width: 100%; 
+    z-index: 9999;  
+  }
+

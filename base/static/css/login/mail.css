@@ -1,0 +1,41 @@
+body.theme-light { 
+    .fundcard,
+    .lettercard{
+      background-color: #e0d8b3;
+      color: #333333;
+    }
+    .alert-custom {
+      background-color: #ada68a;
+      color: #333333;  
+      }
+  }
+  
+  body.theme-dark { 
+    .fundcard,
+    .lettercard{
+    background-color: #151515;
+    color: #ffffff;
+    }
+    .alert-custom {
+      background-color: #151515;
+      color: #ffffff;  
+      }
+  }
+  
+  .enviar{
+    background: #157347;
+    color: #ffffff;
+  }
+  
+  .enviar:hover {
+    background: #157347;  
+    color: #ffffff;  
+  }
+  .show-password:hover {
+    color: #007bff;
+  }
+  
+  
+  #showPasswordIconClose {
+    display: none;
+  }

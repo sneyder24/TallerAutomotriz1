@@ -1,0 +1,29 @@
+.imagenlogin {
+    background-image: url("/static/img/logos/LogoOriginal.png   ");
+    background-position: center center;
+}
+
+
+body.theme-light {
+    .fondlogin,
+    .textlogin{
+        background-color:#e0d8b3;
+        color: #333333;
+    } 
+    .alert-custom {
+    background-color: #ada68a;
+    color: #000000;  
+    } 
+}
+  body.theme-dark {
+    .fondlogin,
+    .textlogin{
+        background-color:#181818;
+        color: #ffffff;
+     } 
+  .alert-custom {
+    background-color: #3e3e3e;
+    color: #ffffff;  
+    }
+  } 
+ 

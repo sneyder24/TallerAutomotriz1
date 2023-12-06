@@ -1,0 +1,32 @@
+{
+  "name": "pinautos",
+  "version": "1.0.0",
+  "description": "es un proyecto de un taller automovilistico en la ciudad de sogamosos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jsebastian1309/TallerPinautos.v2.git"
+  },
+  "keywords": [
+    "1234"
+  ],
+  "author": "sebastian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jsebastian1309/TallerPinautos.v2/issues"
+  },
+  "homepage": "https://github.com/Jsebastian1309/TallerPinautos.v2#readme",
+  "dependencies": {
+    "accessibility": "^4.5.7",
+    "bootstrap": "^5.3.1",
+    "bootstrap-icons": "^1.10.5",
+    "datatables.net-bs5": "^1.13.6",
+    "jquery": "^3.7.0",
+    "scrollreveal": "^4.0.9",
+    "sweetalert2": "^11.7.12",
+    "swiper": "^9.4.1"
+  }
+}

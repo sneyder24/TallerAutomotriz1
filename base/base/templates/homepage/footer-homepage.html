@@ -1,0 +1,47 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/homepage/headerandfooterpagehome.css' %}">
+    </head>
+    <footer class="fondofooter text-white pt-5 pb-4 estatic">
+        <div class="container text center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold footertitle">Nosotros</h5>
+                    <hr class="mb-4">
+                    <p class="textfooter"> 
+                    Es un taller especializado en reparación y mantenimiento de vehículos, con un equipo de mecánicos expertos en diversas marcas y modelos, brindando un servicio confiable y de calidad.                </p>
+                </div>
+                <div class="col-mb-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold footertitle">Direccion</h5>
+                    <hr class="mb-4">
+                    <p class="textfooter">
+                        Cra 10A # 4-25
+                        Sogamoso,Boyaca
+                    </p>
+                </div>
+                <div class="col-mb-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold footertitle">Horario</h5>
+                    <hr class="mb-4">
+                    <p class="textfooter">8:30 Am -12:00 PM</p>
+                    <P class="textfooter"> 2:00 PM -6:00 PM</P>
+                </div>
+                <div class="col-mb-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold footertitle">contacto</h5>
+                    <hr class="mb-4">
+                    <p><a href="https://api.whatsapp.com/send?phone=573103458024" target="_blank" class="whatsapp-footer"><i class="bi bi-whatsapp"></i> 310 3458024</a></p>
+                    <p><a href="#" target="_blank" class="correo-footer"><i class="bi bi-envelope-fill"></i> pinautosboyaca0@gmail.com</a></p>
+                    <p><a href="#" target="_blank" class="telefono-footer"><i class="bi bi-phone"></i> 310 3458024</a></p>
+                </div>
+                <hr class="mb-4">
+                <div class="text-center mb-2">
+                    <p class="textfooter">
+                        copyright 2023 Todos Los Derechos Reservados          
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
+{% include 'partials/scripts.html' %}

@@ -1,0 +1,29 @@
+
+body.theme-light { 
+    .fondo{
+        background-color: #f7f7f7;
+        color: #000000;
+        .whatsapp-link,
+        .telefono-link,
+        .correo-link{
+            color: #000000; 
+            text-decoration: none;
+        }
+    }
+    
+}
+
+body.theme-dark { 
+    .fondo{
+        background-color: #232323;
+        color: #ffffff;
+        .whatsapp-link,
+        .telefono-link,
+        .correo-link{
+            color: #ffffff; 
+            text-decoration: none;
+        }
+    }
+    
+}
+ 

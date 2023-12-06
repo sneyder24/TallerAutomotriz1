@@ -1,0 +1,22 @@
+body.theme-light {
+    .modal-content,
+    .modal-header,
+    .modal-footer,
+    .modal-body,
+    .modal-title{
+        background-color: #e0d8b3;
+        color: #333333;
+
+    }
+    
+}
+  body.theme-dark {
+    .modal-content,
+    .modal-header,
+    .modal-footer,
+    .modal-body,
+    .modal-title{
+        background-color: #181818;
+        color: f7f7f7;
+    }
+}  

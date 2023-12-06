@@ -1,0 +1,11 @@
+{% extends 'partials/body.html' %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+<form action="" method="POST">
+  {% csrf_token %} {{form|crispy}}
+  <div class="text-center">
+    <a href="{% url 'usuarios' %}" class="btn btn-primary m-3"> Volver {{titulo}}</a>
+  <input type="submit" value="Modificar {{titulo}}" class="btn btn-success m-3"/>
+  </div>
+</form>
+{% endblock contenido %}

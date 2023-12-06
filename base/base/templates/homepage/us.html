@@ -1,0 +1,114 @@
+{% extends 'homepage/body-homepage.html' %}
+{% block contenido %}
+{% load static %}
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="{% static 'css/homepage/us.css' %}">
+        <link rel="stylesheet" href="{% static 'node_modules/bootstrap/scss/all.min.css' %}"/>
+        <script src="{% static 'node_modules/scrollreveal/dist/scrollreveal.js' %}"></script>
+    </head>
+    <body> 
+
+        <!-- Inicio Titulo -->
+        <hr>
+        <section class="container-fluid">
+            <div class="d-flex flex-column align-items-center justify-content-center" >
+                <h1 class=" text-box ">Nosotros</h1>
+            </div>
+        </section>
+        <hr>
+        <!-- Fin Titulo -->
+
+        <!-- Inicio Personal Capacitado -->
+        <section class="sec-01">
+            <div class="container">
+                <div class="content">
+                    <div class="image">
+                        <img src="/static/img/nosotros/personalcapacitado.jpg" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h3>Personal Capacitado</h3>
+                        <p>Contamos con un equipo altamente capacitado y especializado en brindar servicios de calidad excepcional.
+                            Nuestro personal está formado por técnicos expertos en el campo automotriz, que poseen una amplia experiencia
+                            y conocimiento en diagnóstico, reparación y mantenimiento de vehículos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin Personal Capacitado -->
+        <!--Inicio Servicio al Cliente Excepcional-->
+        <section class="sec-02">
+            <div class="container">
+                <h2 class="main-title"></h2>
+                <div class="content">
+                    <div class="image">
+                        <img src="/static/img/nosotros/servicioalcliente.jpg" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h3>Servicio al Cliente Excepcional</h3>
+                        <p>Nuestro equipo altamente capacitado y amigable está dedicado a escuchar y comprender las necesidades de nuestros
+                            clientes. Están disponibles para brindar asesoramiento personalizado, explicar los procedimientos y garantizar
+                            que nuestros clientes estén informados en cada paso del proceso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin Servicio al Cliente Excepcional-->
+        <!--Inicio Nosotros-->
+        <section class="sec-01">
+            <div class="container">
+                <div class="content">
+                    <div class="image">
+                        <img src="/static/img/Logos/LogoOriginal.png" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h3>Nosotros</h3>
+                        <p>Somos un taller automotriz dedicado a brindar servicios de alta calidad y
+                            confianza en el cuidado y mantenimiento de vehículos. Nos enorgullece ofrecer
+                            soluciones integrales para mantener su automóvil en óptimas condiciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin Nosotros-->
+        <!--Inicio Visión-->
+        <section class="sec-02">
+            <div class="container">
+                <h2 class="main-title"></h2>
+                <div class="content">
+                    <div class="image">
+                        <img src="/static/img/nosotros/vision.jpeg " alt="">
+                    </div>
+                    <div class="text-box">
+                        <h3>Visión</h3>
+                        <p>Nuestra misión es brindar a nuestros clientes servicios automotrices confiables,
+                            eficientes y de calidad superior. Nos esforzamos por ser el taller de elección
+                            para aquellos que buscan un cuidado excepcional para sus vehículos, ofreciendo
+                            soluciones integrales y personalizadas que satisfacen las necesidades individuales de cada cliente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin Visión-->
+        <!--inicio Misión-->
+        <section class="sec-03">
+            <div class="container">
+                <h2 class="main-title"> </h2>
+                <div class="content">
+                    <div class="image">
+                        <img src="/static/img/nosotros/Mision.jpg" alt="">
+                    </div>
+                    <div class="text-box">
+                        <h3>Misión</h3>
+                        <p>Somos un taller automotriz dedicado a brindar servicios de alta calidad y
+                            confianza en el cuidado y mantenimiento de vehículos. Nos enorgullece ofrecer
+                            soluciones integrales para mantener su automóvil en óptimas condiciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin Misión-->
+        <script src="{% static 'js/homepage/us.js' %}"></script>
+    </body>
+</html>
+{% endblock contenido %}

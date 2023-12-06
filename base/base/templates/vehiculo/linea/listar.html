@@ -1,0 +1,58 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+{% block contenido %}
+    <a href="{% url 'lineas-crear' %}" class="btn btn-success w-25">crear {{titulo}}</a>
+    <div class="card fondcard m-5">
+        <h3 class="text-center m-2">Linea</h3>
+        <div class="card-body">
+                    <div class="col-12">
+                        <table id="example2" class="table table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Linea</th>
+                                    <th>Cilindraje</th>
+                                    <th>Trasmision</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for linea in lineas %}
+                                {% if linea.estado != "1" %}
+                                    <tr class="bg-warning">
+                                {% else %}
+                                    <tr>
+                                {% endif %}
+                                    <td>{{linea.id}}</td>
+                                    <td>{{linea.nombre_linea}}</td>
+                                    <td>{{linea.cilindraje}}</td>
+                                    <td>{{linea.transmision}}</td>
+                                    <td>
+                                        <button type="button" onclick="changeURL('{{linea.id}}')" data-taller-pinautos="{{linea.id}}" class="btnEliminar btn btn-danger"data-bs-toggle="modal" data-bs-target="#modalConf" title="Eliminar">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                            <a class="btn btn-primary" href="{% url 'lineas-modificar' linea.id %}"><i class="bi bi-pencil-square" title="Modificar"></i></a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="{% static 'node_modules/datatables.net/js/jquery.dataTables.min.js'%}"></script>
+  <script src="{% static 'js/tablas/cdn.datatables.net_responsive_2.5.0_js_dataTables.responsive.min.js'%}"></script>
+  <script src="{% static 'js/tablas/responsive.js'%}"></script>
+  <script src="{% static 'js/tablas/botones.js'%}"></script>
+  <script src="{% static 'js/tablas/botones-bootrap.js'%}"></script>
+  <script src="{% static 'js/tablas/zip.js'%}"></script>
+  <script src="{% static 'js/tablas/pdfmake.js'%}"></script>
+  <script src="{% static 'js/tablas/fonts.js'%}"></script>
+  <script src="{% static 'js/tablas/html5.js'%}"></script>
+  <script src="{% static 'js/tablas/print.js'%}"></script>
+  <script src="{% static 'js/tablas/colVis.js'%}"></script>
+  <script src="{% static 'js/tablas/tablas2.js'%}"></script>
+{% endblock contenido %}
+

@@ -1,0 +1,64 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+{% block contenido %}
+  <a href="{% url 'servicios-crear' %}" class="btn btn-success w-25">Crear {{titulo}}</a>
+  <div class="card fondcard m-5">
+    <h3 class="text-center m-2">Servicios</h3>
+    <div class="card-body">
+            <table id="example2" class="table table-striped" style="width:100%">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Fecha Registo</th>
+                  <th>Mecanico</th>
+                  <th>kilometraje</th>
+                  <th>Estado Vehiculo</th>
+                  <th>Observaciones</th>
+                  <th>Costo Repuesto</th>
+                  <th>Costo Servicio</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for servicio in servicios %}
+                  {% if servicio.estado != "0" %}
+                    <tr>
+                      <td>{{ servicio.id }}</td>
+                      <td>{{ servicio.fecha_servicio }}</td>
+                      <td>{{ servicio.nombres }}</td>
+                      <td>{{ servicio.kilometraje }}</td>
+                      <td>{{ servicio.estado_vehiculo}}</td>
+                      <td>{{ servicio.observaciones}}</td>
+                      <td>{{ servicio.nombrerepuesto}}</td>
+                      <td>{{ servicio.nombreservicio}}</td>
+                      <td>
+                        <button type="button" onclick="changeURL('{{ servicio.id }}')" data-taller-pinautos="{{ servicio.id }}" class="btnEliminar btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalConf">
+                          <i class="bi bi-trash"></i>
+                        </button>
+                        <a class="btn btn-primary" href="{% url 'servicios-modificar' servicio.id %}">
+                          <i class="bi bi-pencil-square"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  {% endif %}
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="{% static 'node_modules/datatables.net/js/jquery.dataTables.min.js'%}"></script>
+  <script src="{% static 'js/tablas/cdn.datatables.net_responsive_2.5.0_js_dataTables.responsive.min.js'%}"></script>
+  <script src="{% static 'js/tablas/responsive.js'%}"></script>
+  <script src="{% static 'js/tablas/botones.js'%}"></script>
+  <script src="{% static 'js/tablas/botones-bootrap.js'%}"></script>
+  <script src="{% static 'js/tablas/zip.js'%}"></script>
+  <script src="{% static 'js/tablas/pdfmake.js'%}"></script>
+  <script src="{% static 'js/tablas/fonts.js'%}"></script>
+  <script src="{% static 'js/tablas/html5.js'%}"></script>
+  <script src="{% static 'js/tablas/print.js'%}"></script>
+  <script src="{% static 'js/tablas/colVis.js'%}"></script>
+  <script src="{% static 'js/tablas/tablas2.js'%}"></script>
+{% endblock contenido %}

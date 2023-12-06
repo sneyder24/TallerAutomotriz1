@@ -1,0 +1,23 @@
+{% load static %}
+<script src="{% static 'node_modules/sweetalert2/dist/sweetalert2.all.min.js' %}"></script>
+<script src="{% static 'node_modules/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'node_modules/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js' %}"></script>
+<script>
+    function changeURL(pinautos){
+        $("#btnConfElim").attr("href", "/{{modulo|lower}}/{{titulo|lower}}/eliminar/" + pinautos+"/");
+        return false;
+    }
+
+    $( document ).ready(function() {  
+        $('.btnEliminar').on('click', function(evt) {  
+            var pinautos = $(this).data("taller-pinautos");
+            changeURL(pinautos);
+        });
+    });
+    
+    </script>
+    <script src="{% static 'node_modules/sweetalert2/dist/sweetalert2.all.min.js' %}"></script>
+
+
+ 

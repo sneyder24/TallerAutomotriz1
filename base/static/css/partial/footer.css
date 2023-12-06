@@ -1,0 +1,21 @@
+body.theme-light {
+    .text-footer,
+    .fondfooter{
+    background-color:#e0d8b3;
+    color: #333333;
+  }
+}
+  body.theme-dark {
+    .text-footer,
+    .fondfooter{
+    background-color:#181818;
+    color: #ffffff;
+  }
+}  
+
+.fondfooter {
+  margin-top: auto;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}

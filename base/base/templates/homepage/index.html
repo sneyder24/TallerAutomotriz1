@@ -1,0 +1,275 @@
+{% extends 'homepage/body-homepage.html' %}
+{% load static %}
+{% block contenido %}
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="{% static 'node_modules/swiper/swiper-bundle.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/homepage/homepage.css' %}">
+        <script src="{% static 'node_modules/swiper/swiper-bundle.min.js' %}"></script>
+        <script src="{% static 'js/homepage/swiper.js'%}"></script>
+    </head>
+
+    <body>
+        <!--Inicio Bienvenida -->
+        <section class="container text-center">
+            <h1>Bienvenido al Taller Automotriz Pinautos</h1>
+            <p>Kilómetros de confianza, cada reparación un viaje sin problemas.</p>
+        </section>
+        <!--Fin Bienvenida -->
+
+        <hr>
+
+        <!--Inicio Carusel -->
+        <section id="pinautos" class="carousel slide h-50 d-none d-md-block" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="container">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#pinautos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#pinautos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#pinautos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'img/carousel/Carusel-1.jpg' %}" class="d-block w-100 img-fluid" alt="#">
+                        <div class="carousel-caption-bg">
+                            <h5 class="carousel-text">Taller Pinautos</h5>
+                            <p class="carousel-text">Kilómetros de confianza, cada reparación un viaje sin probleMás.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/carousel/Carusel-2.jpg' %}" class="d-block w-100 img-fluid" alt="#">
+                        <div class="carousel-caption-bg">
+                            <h5 class="carousel-text">Taller Pinautos</h5>
+                            <p class="carousel-text">Kilómetros de confianza, cada reparación un viaje sin probleMás.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'img/carousel/Carusel-3.jpg' %}" class="d-block w-100 img-fluid" alt="#">
+                        <div class="carousel-caption-bg ">
+                            <h5 class="carousel-text">Taller Pinautos</h5>
+                            <p class="carousel-text">Kilómetros de confianza, cada reparación un viaje sin probleMás.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Botones Carrusel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#pinautos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#pinautos" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <!-- Botones Carrusel -->
+        </section>
+        <!--Fin Carusel --> 
+
+        <hr>
+
+        <!-- Inicio Servicios -->
+        <h1 class="text-center  m-2">Nuestros Servicios</h1>
+        <div class="container-fluid mt-4 mb-4">
+            <div class="row">
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="card fundservices">
+                        <div class="card-body ">
+                            <h5 class="card-title letterservices text-center">Mecanica General</h5>
+                            <p class="card-text letterservices">Nuestros expertos en mecánica se encargan de resolver cualquier problema en tu vehículo, desde el motor hasta la suspensión, garantizando un funcionamiento impecable.</p>
+                            <div class="text-center">
+                                <a href="{% url 'services' %}"class="btn btn-primary">Saber Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="card fundservices">
+                        <div class="card-body">
+                            <h5 class="card-title letterservices text-center">Mantenimiento preventivo</h5>
+                            <p class="card-text letterservices">Realizamos inspecciones regulares y servicios de rutina para prevenir averías costosas en el futuro, incluyendo cambios de aceite, revisiones de filtros y ajustes de frenos.</p>
+                            <div class="text-center">
+                                <a href="{% url 'services' %}"class="btn btn-primary">Saber Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="card fundservices">
+                        <div class="card-body">
+                            <h5 class="card-title letterservices text-center">Revisión de frenos</h5>
+                            <p class="card-text letterservices">Nuestro servicio minucioso de revisión de frenos garantiza tu seguridad al volante, inspeccionando y reemplazando las pastillas, discos, tambores y líquido de frenos si es necesario.</p>
+                            <div class="text-center">
+                                <a href="{% url 'services' %}"class="btn btn-primary">Saber Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="card fundservices">
+                        <div class="card-body">
+                            <h5 class="card-title letterservices text-center">Limpieza interna y externa del motor</h5>
+                            <p class="card-text letterservices">Mejoramos el rendimiento de tu motor y su apariencia mediante una limpieza exhaustiva que elimina suciedad, grasa y residuos tanto en el interior como en el exterior del motor.</p>
+                            <div class="text-center">
+                                <a href="{% url 'services' %}"class="btn btn-primary">Saber Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="card fundservices">
+                        <div class="card-body">
+                            <h5 class="card-title letterservices text-center">Revisión de fluidos</h5>
+                            <p class="card-text letterservices">Verificamos y reemplazamos los diferentes fluidos de tu vehículo, como el aceite del motor, líquido de frenos, líquido refrigerante y líquido de dirección asistida, asegurando su nivel y calidad óptimos</p>
+                            <div class="text-center">
+                                <a href="{% url 'services' %}"class="btn btn-primary">Saber Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4">
+                    <div class="card fundservices ">
+                        <div class="card-body">
+                            <h5 class="card-title letterservices text-center">Revisión de filtros</h5>
+                            <p class="card-text letterservices">Mantenemos tus sisteMás limpios y protegidos mediante la revisión y reemplazo de filtros, como el filtro de aire, filtro de aceite y filtro de combustible, para garantizar un flujo adecuado y eficiente.</p>
+                            <div class="text-center">
+                                <a href="{% url 'services' %}"class="btn btn-primary">Saber Más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Servicios -->
+
+        <hr>
+
+        <!-- Inicio Marcas -->
+        <section id="tranding" class="m-5">
+            <h1 class="text-center section-heading m-2">Marcas Que atendemos</h1>
+            <div class="container2">
+                <div class="swiper tranding-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img ">
+                            <img src="{% static 'img/marcas/Chevrolet-logo-blanco.jpeg' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                            <img src="{% static 'img/marcas/Honda-Logo-blanco.png' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                            <img src="{% static 'img/marcas/logo-citroen-blanco.png' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                            <img src="{% static 'img/marcas/logo-Ford-blanco.png' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                            <img src="{% static 'img/marcas/logo-Hyundai-blanco.jpg' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                            <img src="{% static 'img/marcas/logo-kia-blanco.png' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                            <img src="{% static 'img/marcas/logo-mazda-blanco.png' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                            <img src="{% static 'img/marcas/logo-mitsubishi-blanco.png' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                            <img src="{% static 'img/marcas/logo-nissan-blanco.png' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                            <img src="{% static 'img/marcas/Renault-logo-blanco.png' %}" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                            <div class="tranding-slide-content-bottom">
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <!--  Fin Marcas -->
+
+        <hr>
+
+        <!-- Inicio Boton Whatsapp -->
+        <h1 class="text-center m-2 ">Comunícate con nosotros</h1>
+        <section class="text-center  m-4">
+            <a href="https://api.whatsapp.com/send?phone=573103458024" target="_blank" class="btn btn-success">
+            <i class="bi bi-whatsapp me-2"></i>
+            Envíanos un mensaje</a>
+        </section>
+        <!-- Fin Boton Whatsapp -->
+
+        <hr>
+
+        <!-- Inicio Donde Encontrarnos -->
+        <h1 class="text-center m-4">Donde Encontrarnos</h1>
+        <section class="map-container">
+            <div class="map-wrapper mb-4">
+                <div class="map-responsive justify-content-center">
+                <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3970.034370943522!2d-72.9334954!3d5.7081738!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a45c5bca75d07%3A0x47a74cd871418199!2sCra%2010A%20%234-25%2C%20Sogamoso%2C%20Boyac%C3%A1!5e0!3m2!1ses-419!2sco!4v1685840363851!5m2!1ses-419!2sco" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Donde Encontrarnos -->
+        
+        <script src="{% static 'node_modules/swiper/swiper-bundle.min.js' %}"></script>
+        <script src="{% static 'js/homepage/swiper.js'%}"></script>
+    </body>
+</html>
+{% endblock contenido %}

@@ -1,0 +1,29 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{% static 'img/Logos/Icono2.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap-icons/font/bootstrap-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/partial/bodyhomepage.css' %}">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>Taller  Automotriz Pinautos</title>
+  </head>
+  <body{% if request.session.theme == 'dark' %}class="theme-dark"{% else %}class="theme-light"{% endif %} class="color" id="texto">
+    {% include 'homepage/header-homepage.html' %}
+      <div class="space ">
+        {% block contenido %}
+        {% endblock contenido %}
+      </div>
+    {% include 'homepage/whatsapp.html' %}
+    <script src="{% static 'js/body.js'%}"></script>
+    <script type="text/javascript" src="{% static '/node_modules/accessibility/dist/main.bundle.js' %}"></script>
+    <script src="{% static 'js/accessibility.js'%}"></script>
+    {% include 'homepage/footer-homepage.html' %}
+  </body>
+</html>

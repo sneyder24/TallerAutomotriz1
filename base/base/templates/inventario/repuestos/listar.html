@@ -1,0 +1,61 @@
+{% extends 'partials/body.html' %}
+{% load static %}
+{% block contenido %}
+  <a href="{% url 'repuestos-crear' %}" class="btn btn-success w-25">Crear {{titulo}}</a>
+  <div class="card fondcard m-5">
+    <h3 class="text-center m-2">Repuestos</h3>
+    <div class="card-body">
+            <table id="example2" class="table table-striped" style="width:100%">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre Repuesto</th>
+                  <th>Costo Repuesto</th>
+                  <th>Stock</th>
+                  <th>Tipo Repuesto</th>
+                  <th>Descripcion Repuesto</th>
+                  <th>Marca De Repuesto</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for repuesto in repuestos %} {% if repuesto.estado != "0" %}
+                {% endif %}
+                <tr>
+                  <td>{{repuesto.id}}</td>
+                  <td>{{repuesto.nombrerepuesto}}</td>
+                  <td>{{repuesto.costorepuesto}}</td>
+                  <td>{{repuesto.stock}}</td>
+                  <td>{{repuesto.tipo_repuesto}}</td>
+                  <td>{{repuesto.descripcionrepuesto}}</td>
+                  <td>{{repuesto.marcarepuesto}}</td>
+                  <td>
+                    <button type="button" onclick="changeURL('{{repuesto.id}}')" data-taller-pinautos="{{repuesto.id}}" class="btnEliminar btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalConf">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                    <a class="btn btn-primary" href="{% url 'repuestos-modificar' repuesto.id%}">
+                      <i class="bi bi-pencil-square"></i>
+                    </a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="{% static 'node_modules/datatables.net/js/jquery.dataTables.min.js'%}"></script>
+  <script src="{% static 'js/tablas/cdn.datatables.net_responsive_2.5.0_js_dataTables.responsive.min.js'%}"></script>
+  <script src="{% static 'js/tablas/responsive.js'%}"></script>
+  <script src="{% static 'js/tablas/botones.js'%}"></script>
+  <script src="{% static 'js/tablas/botones-bootrap.js'%}"></script>
+  <script src="{% static 'js/tablas/zip.js'%}"></script>
+  <script src="{% static 'js/tablas/pdfmake.js'%}"></script>
+  <script src="{% static 'js/tablas/fonts.js'%}"></script>
+  <script src="{% static 'js/tablas/html5.js'%}"></script>
+  <script src="{% static 'js/tablas/print.js'%}"></script>
+  <script src="{% static 'js/tablas/colVis.js'%}"></script>
+  <script src="{% static 'js/tablas/tablas2.js'%}"></script>
+{% endblock contenido %}
